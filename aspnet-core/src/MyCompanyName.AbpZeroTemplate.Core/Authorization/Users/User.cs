@@ -22,6 +22,7 @@ namespace MyCompanyName.AbpZeroTemplate.Authorization.Users
 
         public string GoogleAuthenticatorKey { get; set; }
 
+        public virtual string SchoolId { get; set; }
         public List<UserOrganizationUnit> OrganizationUnits { get; set; }
 
         //Can add application specific user properties here

@@ -29221,6 +29221,7 @@ export class UserEditDto implements IUserEditDto {
     shouldChangePasswordOnNextLogin!: boolean;
     isTwoFactorEnabled!: boolean;
     isLockoutEnabled!: boolean;
+    schoolId!: string | undefined;
 
     constructor(data?: IUserEditDto) {
         if (data) {
@@ -29244,6 +29245,7 @@ export class UserEditDto implements IUserEditDto {
             this.shouldChangePasswordOnNextLogin = _data["shouldChangePasswordOnNextLogin"];
             this.isTwoFactorEnabled = _data["isTwoFactorEnabled"];
             this.isLockoutEnabled = _data["isLockoutEnabled"];
+            this.schoolId = _data["schoolId"];
         }
     }
 
@@ -29267,6 +29269,7 @@ export class UserEditDto implements IUserEditDto {
         data["shouldChangePasswordOnNextLogin"] = this.shouldChangePasswordOnNextLogin;
         data["isTwoFactorEnabled"] = this.isTwoFactorEnabled;
         data["isLockoutEnabled"] = this.isLockoutEnabled;
+        data["schoolId"] = this.schoolId;
         return data; 
     }
 }
@@ -29283,6 +29286,7 @@ export interface IUserEditDto {
     shouldChangePasswordOnNextLogin: boolean;
     isTwoFactorEnabled: boolean;
     isLockoutEnabled: boolean;
+    schoolId: string | undefined;
 }
 
 export class UserListDto implements IUserListDto {
@@ -29296,6 +29300,7 @@ export class UserListDto implements IUserListDto {
     roles!: UserListRoleDto[] | undefined;
     isActive!: boolean;
     creationTime!: DateTime;
+    schoolId!: string | undefined;
     id!: number;
 
     constructor(data?: IUserListDto) {
@@ -29323,6 +29328,7 @@ export class UserListDto implements IUserListDto {
             }
             this.isActive = _data["isActive"];
             this.creationTime = _data["creationTime"] ? DateTime.fromISO(_data["creationTime"].toString()) : <any>undefined;
+            this.schoolId = _data["schoolId"];
             this.id = _data["id"];
         }
     }
@@ -29350,6 +29356,7 @@ export class UserListDto implements IUserListDto {
         }
         data["isActive"] = this.isActive;
         data["creationTime"] = this.creationTime ? this.creationTime.toString() : <any>undefined;
+        data["schoolId"] = this.schoolId;
         data["id"] = this.id;
         return data; 
     }
@@ -29366,6 +29373,7 @@ export interface IUserListDto {
     roles: UserListRoleDto[] | undefined;
     isActive: boolean;
     creationTime: DateTime;
+    schoolId: string | undefined;
     id: number;
 }
 

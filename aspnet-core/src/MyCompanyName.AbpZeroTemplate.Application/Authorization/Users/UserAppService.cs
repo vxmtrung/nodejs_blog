@@ -30,6 +30,8 @@ using MyCompanyName.AbpZeroTemplate.Dto;
 using MyCompanyName.AbpZeroTemplate.Notifications;
 using MyCompanyName.AbpZeroTemplate.Url;
 using MyCompanyName.AbpZeroTemplate.Organizations.Dto;
+using MyCompanyName.AbpZeroTemplate.Nhom1;
+using NPOI.SS.Formula.Functions;
 
 namespace MyCompanyName.AbpZeroTemplate.Authorization.Users
 {
@@ -55,6 +57,7 @@ namespace MyCompanyName.AbpZeroTemplate.Authorization.Users
         private readonly UserManager _userManager;
         private readonly IRepository<UserOrganizationUnit, long> _userOrganizationUnitRepository;
         private readonly IRepository<OrganizationUnitRole, long> _organizationUnitRoleRepository;
+        private readonly IRepository<Student> _studentRepository;
 
         public UserAppService(
             RoleManager roleManager,
@@ -73,7 +76,9 @@ namespace MyCompanyName.AbpZeroTemplate.Authorization.Users
             IRoleManagementConfig roleManagementConfig,
             UserManager userManager,
             IRepository<UserOrganizationUnit, long> userOrganizationUnitRepository,
-            IRepository<OrganizationUnitRole, long> organizationUnitRoleRepository)
+            IRepository<OrganizationUnitRole, long> organizationUnitRoleRepository,
+            IRepository<Student> studentRepository
+             )
         {
             _roleManager = roleManager;
             _userEmailer = userEmailer;
@@ -92,7 +97,7 @@ namespace MyCompanyName.AbpZeroTemplate.Authorization.Users
             _userOrganizationUnitRepository = userOrganizationUnitRepository;
             _organizationUnitRoleRepository = organizationUnitRoleRepository;
             _roleRepository = roleRepository;
-
+            _studentRepository = studentRepository;
             AppUrlService = NullAppUrlService.Instance;
         }
 
@@ -352,6 +357,21 @@ namespace MyCompanyName.AbpZeroTemplate.Authorization.Users
             {
                 var role = await _roleManager.GetRoleByNameAsync(roleName);
                 user.Roles.Add(new UserRole(AbpSession.TenantId, user.Id, role.Id));
+                if (role.Id==4)
+                {
+                    Student student = new()
+                    {
+                        StudentId = user.SchoolId.ToString(),
+                        Name = user.FullName,
+                        Major = "Computer Science",
+                        Status = "Đang học",
+                        ActivityClass = "PPL",
+                        Group = "A",
+                        Batch = int.Parse(user.SchoolId.ToString().Substring(0, 2))
+
+                    };
+                    await _studentRepository.InsertAsync(student);
+                }
             }
 
             CheckErrors(await UserManager.CreateAsync(user));

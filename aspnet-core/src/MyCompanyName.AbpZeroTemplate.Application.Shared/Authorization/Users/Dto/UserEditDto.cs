@@ -45,6 +45,7 @@ namespace MyCompanyName.AbpZeroTemplate.Authorization.Users.Dto
         public virtual bool IsTwoFactorEnabled { get; set; }
 
         public virtual bool IsLockoutEnabled { get; set; }
+        public string SchoolId { get; set; }
 
     }
 }

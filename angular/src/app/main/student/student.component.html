@@ -46,8 +46,8 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr *ngFor="let student of students">
-                                <th scope="row">1</th>
+                            <tr *ngFor="let student of students; let i=index">
+                                <th scope="row">{{i+1}}</th>
                                 <td>{{student.studentId}}</td>
                                 <td>{{student.name}}</td>
                                 <td>{{student.activityClass}}</td>

@@ -17,7 +17,7 @@ namespace MyCompanyName.AbpZeroTemplate.ERP
 {
     public class ExamFileAppService : AbpZeroTemplateAppServiceBase, IExamFileAppService
     {
-        private readonly IRepository<ExamFile,int> _examFileRepository;
+        private readonly IRepository<ExamFile, int> _examFileRepository;
         private readonly IRepository<Question> _questionRepository;
 
         public ExamFileAppService(IRepository<ExamFile> examFileRepository, IRepository<Question> questionRepository)

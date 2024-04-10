@@ -27,5 +27,6 @@ namespace MyCompanyName.AbpZeroTemplate.Authorization.Users.Dto
         public bool IsActive { get; set; }
 
         public DateTime CreationTime { get; set; }
+        public string SchoolId { get; set; }
     }
 }
