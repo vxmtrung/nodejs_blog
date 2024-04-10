@@ -14,8 +14,8 @@ import { RouterModule } from '@angular/router';
                     },
                     {
                         path: 'exam',
-                        loadChildren: () => import('./exam/exam.module').then(m => m.ExamModule)
-                        // data: {permission: 'Page.Tenant.ViewExam'}
+                        loadChildren: () => import('./exam/exam.module').then(m => m.ExamModule),
+                        data: {permission: 'Pages.Tenant.Exam'}
                     },
                     {
                         path: 'student',

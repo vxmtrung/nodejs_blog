@@ -20,7 +20,7 @@ export class AppNavigationService {
                 'flaticon-line-graph',
                 '/app/admin/hostDashboard'
             ),
-            new AppMenuItem('Đề thi', null, 'flaticon-folder', '/app/main/exam'),
+            new AppMenuItem('Đề thi', 'Pages.Tenant.Exam', 'flaticon-folder', '/app/main/exam'),
             new AppMenuItem("Sinh viên", 'Pages.Tenant.Student', "flaticon-users", "/app/main/student"),
 
             new AppMenuItem('Dashboard', 'Pages.Tenant.Dashboard', 'flaticon-line-graph', '/app/main/dashboard'),

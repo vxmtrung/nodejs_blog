@@ -101,6 +101,7 @@
         public const string PagesAdministrationHostDashboard = "Pages.Administration.Host.Dashboard";
 
         public const string Pages_Tenant_Student = "Pages.Tenant.Student";
+        public const string Pages_Tenant_Exam = "Pages.Tenant.Exam";
 
     }
 }

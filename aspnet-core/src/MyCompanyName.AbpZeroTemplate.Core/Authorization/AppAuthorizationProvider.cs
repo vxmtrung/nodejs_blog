@@ -30,8 +30,10 @@ namespace MyCompanyName.AbpZeroTemplate.Authorization
 
             var pages = context.GetPermissionOrNull(AppPermissions.Pages) ?? context.CreatePermission(AppPermissions.Pages, L("Pages"));
             pages.CreateChildPermission(AppPermissions.Pages_DemoUiComponents, L("DemoUiComponents"));
+
             pages.CreateChildPermission(AppPermissions.Pages_Tenant_Student, L("StudentInfo"));
 
+            pages.CreateChildPermission(AppPermissions.Pages_Tenant_Exam, L("Exam"));
 
             var administration = pages.CreateChildPermission(AppPermissions.Pages_Administration, L("Administration"));
 

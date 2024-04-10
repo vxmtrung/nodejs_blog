@@ -16,6 +16,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MyCompanyName.AbpZeroTemplate.ERP
 {
+    [AbpAuthorize(AppPermissions.Pages_Tenant_Exam)]
     public class ExamAppService : AbpZeroTemplateAppServiceBase, IExamAppService
     {
         private readonly IRepository<Exam, int> _examRepository;
