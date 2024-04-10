@@ -1,0 +1,61 @@
+<div [@routerTransition]>
+    <sub-header [title]="'Sinh viên'">
+        <div class="d-flex align-items-center">
+
+        </div>
+    </sub-header>
+    <div class="mt-3 kt-content kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor">
+        <!-- <div class="kt-subheader kt-grid__item">
+            <div class="kt-container ">
+                <div class="kt-subheader__main">
+                    <h3 class="kt-subheader__title">
+                        <span>{{"Student" | localize}}</span>
+                    </h3>
+                </div>
+            </div>
+        </div> -->
+        <form autocomplete="off">
+            <div class="kt-form">
+                <div class="row align-items-center kt-margin-b-10">
+                    <div class="col-xl-12">
+                        <div class="form-group align-items-center">
+                            <div class="input-group">
+                                <input [(ngModel)]="filter" name="filterText" autoFocus class="form-control"
+                                    [placeholder]="l('SearchWithThreeDot' | localize)" type="text">
+                                <span class="input-group-btn">
+                                    <button (click)="getStudent()" class="btn btn-primary" type="submit"><i
+                                            class="flaticon-search-1"></i></button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="mt-5 p-5 kt-container kt-grid__item kt-grid__item--fluid">
+            <div class="kt-portlet kt-portlet--mobile">
+                <div class="kt-portlet__body  kt-portlet__body--fit">
+                    <h3>{{"Danh sách sinh viên" | localize}}</h3>
+                    <table class="table table-light table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">MSSV</th>
+                                <th scope="col">Họ và tên</th>
+                                <th scope="col">Lớp</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let student of students">
+                                <th scope="row">1</th>
+                                <td>{{student.studentId}}</td>
+                                <td>{{student.name}}</td>
+                                <td>{{student.activityClass}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
