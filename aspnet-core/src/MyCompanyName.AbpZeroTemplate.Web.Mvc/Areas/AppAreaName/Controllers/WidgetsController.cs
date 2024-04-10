@@ -11,31 +11,31 @@ namespace MyCompanyName.AbpZeroTemplate.Web.Areas.AppAreaName.Controllers
     {
         #region Host
 
-        [AbpMvcAuthorize(AppPermissions.Pages_Administration_Host_Dashboard)]
+        [AbpMvcAuthorize(AppPermissions.PagesAdministrationHostDashboard)]
         public IActionResult EditionStatistics()
         {
             return PartialView("Components/CustomizableDashboard/Widgets/EditionStatistics");
         }
 
-        [AbpMvcAuthorize(AppPermissions.Pages_Administration_Host_Dashboard)]
+        [AbpMvcAuthorize(AppPermissions.PagesAdministrationHostDashboard)]
         public IActionResult HostTopStats()
         {
             return PartialView("Components/CustomizableDashboard/Widgets/HostTopStats");
         }
 
-        [AbpMvcAuthorize(AppPermissions.Pages_Administration_Host_Dashboard)]
+        [AbpMvcAuthorize(AppPermissions.PagesAdministrationHostDashboard)]
         public IActionResult IncomeStatistics()
         {
             return PartialView("Components/CustomizableDashboard/Widgets/IncomeStatistics");
         }
 
-        [AbpMvcAuthorize(AppPermissions.Pages_Administration_Host_Dashboard)]
+        [AbpMvcAuthorize(AppPermissions.PagesAdministrationHostDashboard)]
         public IActionResult RecentTenants()
         {
             return PartialView("Components/CustomizableDashboard/Widgets/RecentTenants");
         }
 
-        [AbpMvcAuthorize(AppPermissions.Pages_Administration_Host_Dashboard)]
+        [AbpMvcAuthorize(AppPermissions.PagesAdministrationHostDashboard)]
         public IActionResult SubscriptionExpiringTenants()
         {
             return PartialView("Components/CustomizableDashboard/Widgets/SubscriptionExpiringTenants");

@@ -21,7 +21,7 @@ export class AppNavigationService {
                 '/app/admin/hostDashboard'
             ),
             new AppMenuItem('Đề thi', null, 'flaticon-folder', '/app/main/exam'),
-            new AppMenuItem("Sinh viên", null, "flaticon-users", "/app/main/student"),
+            new AppMenuItem("Sinh viên", 'Pages.Tenant.Student', "flaticon-users", "/app/main/student"),
 
             new AppMenuItem('Dashboard', 'Pages.Tenant.Dashboard', 'flaticon-line-graph', '/app/main/dashboard'),
             new AppMenuItem('Tenants', 'Pages.Tenants', 'flaticon-list-3', '/app/admin/tenants'),

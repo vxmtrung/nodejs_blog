@@ -14,7 +14,7 @@ using MyCompanyName.AbpZeroTemplate.MultiTenancy.Payments;
 namespace MyCompanyName.AbpZeroTemplate.MultiTenancy.HostDashboard
 {
     [DisableAuditing]
-    [AbpAuthorize(AppPermissions.Pages_Administration_Host_Dashboard)]
+    [AbpAuthorize(AppPermissions.PagesAdministrationHostDashboard)]
     public class HostDashboardAppService : AbpZeroTemplateAppServiceBase, IHostDashboardAppService
     {
         private const int SubscriptionEndAlertDayCount = 30;

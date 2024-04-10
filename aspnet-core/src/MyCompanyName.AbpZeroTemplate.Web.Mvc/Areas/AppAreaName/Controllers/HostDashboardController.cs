@@ -8,7 +8,7 @@ using MyCompanyName.AbpZeroTemplate.Web.Areas.AppAreaName.Startup;
 namespace MyCompanyName.AbpZeroTemplate.Web.Areas.AppAreaName.Controllers
 {
     [Area("AppAreaName")]
-    [AbpMvcAuthorize(AppPermissions.Pages_Administration_Host_Dashboard)]
+    [AbpMvcAuthorize(AppPermissions.PagesAdministrationHostDashboard)]
     public class HostDashboardController : CustomizableDashboardControllerBase
     {
         public HostDashboardController(

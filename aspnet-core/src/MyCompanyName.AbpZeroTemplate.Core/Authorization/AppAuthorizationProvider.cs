@@ -30,6 +30,8 @@ namespace MyCompanyName.AbpZeroTemplate.Authorization
 
             var pages = context.GetPermissionOrNull(AppPermissions.Pages) ?? context.CreatePermission(AppPermissions.Pages, L("Pages"));
             pages.CreateChildPermission(AppPermissions.Pages_DemoUiComponents, L("DemoUiComponents"));
+            pages.CreateChildPermission(AppPermissions.Pages_Tenant_Student, L("StudentInfo"));
+
 
             var administration = pages.CreateChildPermission(AppPermissions.Pages_Administration, L("Administration"));
 
@@ -116,7 +118,7 @@ namespace MyCompanyName.AbpZeroTemplate.Authorization
             administration.CreateChildPermission(AppPermissions.Pages_Administration_Host_Settings, L("Settings"), multiTenancySides: MultiTenancySides.Host);
             administration.CreateChildPermission(AppPermissions.Pages_Administration_Host_Maintenance, L("Maintenance"), multiTenancySides: _isMultiTenancyEnabled ? MultiTenancySides.Host : MultiTenancySides.Tenant);
             administration.CreateChildPermission(AppPermissions.Pages_Administration_HangfireDashboard, L("HangfireDashboard"), multiTenancySides: _isMultiTenancyEnabled ? MultiTenancySides.Host : MultiTenancySides.Tenant);
-            administration.CreateChildPermission(AppPermissions.Pages_Administration_Host_Dashboard, L("Dashboard"), multiTenancySides: MultiTenancySides.Host);
+            administration.CreateChildPermission(AppPermissions.PagesAdministrationHostDashboard, L("Dashboard"), multiTenancySides: MultiTenancySides.Host);
         }
 
         private static ILocalizableString L(string name)

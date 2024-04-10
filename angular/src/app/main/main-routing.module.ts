@@ -10,7 +10,7 @@ import { RouterModule } from '@angular/router';
                     {
                         path: 'dashboard',
                         loadChildren: () => import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
-                        // data: { permission: 'Pages.Tenant.Dashboard' },
+                        data: { permission: 'Pages.Tenant.Dashboard' },
                     },
                     {
                         path: 'exam',
@@ -19,7 +19,8 @@ import { RouterModule } from '@angular/router';
                     },
                     {
                         path: 'student',
-                        loadChildren: () => import('./student/student.module').then(m => m.StudentModule)
+                        loadChildren: () => import('./student/student.module').then(m => m.StudentModule),
+                        data : { permission: 'Pages.Tenant.Student' } 
                 },
                     { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
                     { path: '**', redirectTo: 'dashboard' },

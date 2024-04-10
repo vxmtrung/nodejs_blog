@@ -100,7 +100,7 @@ namespace MyCompanyName.AbpZeroTemplate.DashboardCustomization.Definitions
 
             var hostWidgetsDefaultPermission = new List<string>
             {
-                AppPermissions.Pages_Administration_Host_Dashboard
+                AppPermissions.PagesAdministrationHostDashboard
             };
 
             var incomeStatistics = new WidgetDefinition(

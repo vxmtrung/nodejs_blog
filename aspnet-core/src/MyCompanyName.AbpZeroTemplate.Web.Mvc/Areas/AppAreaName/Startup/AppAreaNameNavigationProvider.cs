@@ -19,7 +19,7 @@ namespace MyCompanyName.AbpZeroTemplate.Web.Areas.AppAreaName.Startup
                         L("Dashboard"),
                         url: "AppAreaName/HostDashboard",
                         icon: "flaticon-line-graph",
-                        permissionDependency: new SimplePermissionDependency(AppPermissions.Pages_Administration_Host_Dashboard)
+                        permissionDependency: new SimplePermissionDependency(AppPermissions.PagesAdministrationHostDashboard)
                     )
                 ).AddItem(new MenuItemDefinition(
                     AppAreaNamePageNames.Host.Tenants,

@@ -1,8 +1,10 @@
 ﻿using Abp.Application.Services.Dto;
+using Abp.Authorization;
 using Abp.Collections.Extensions;
 using Abp.Domain.Repositories;
 using Abp.Extensions;
 using AutoMapper;
+using MyCompanyName.AbpZeroTemplate.Authorization;
 using MyCompanyName.AbpZeroTemplate.Dto;
 using Stripe;
 using System;
@@ -13,6 +15,7 @@ using System.Threading.Tasks;
 
 namespace MyCompanyName.AbpZeroTemplate.Nhom1
 {
+    [AbpAuthorize(AppPermissions.Pages_Tenant_Student)]
     public class StudentAppService: AbpZeroTemplateAppServiceBase,IStudentAppService
     {
         private readonly IRepository<Student> _studentRepository;

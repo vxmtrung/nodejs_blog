@@ -15,7 +15,7 @@ namespace MyCompanyName.AbpZeroTemplate.Web.Areas.AppAreaName.Controllers
         {
             if (AbpSession.MultiTenancySide == MultiTenancySides.Host)
             {
-                if (await IsGrantedAsync(AppPermissions.Pages_Administration_Host_Dashboard))
+                if (await IsGrantedAsync(AppPermissions.PagesAdministrationHostDashboard))
                 {
                     return RedirectToAction("Index", "HostDashboard");
                 }
