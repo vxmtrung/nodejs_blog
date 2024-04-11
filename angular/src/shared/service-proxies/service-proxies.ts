@@ -26852,6 +26852,7 @@ export class StudentListDto implements IStudentListDto {
     studentId!: number;
     name!: string | undefined;
     activityClass!: string | undefined;
+    group!: string | undefined;
     isDeleted!: boolean;
     deleterUserId!: number | undefined;
     deletionTime!: DateTime | undefined;
@@ -26875,6 +26876,7 @@ export class StudentListDto implements IStudentListDto {
             this.studentId = _data["studentId"];
             this.name = _data["name"];
             this.activityClass = _data["activityClass"];
+            this.group = _data["group"];
             this.isDeleted = _data["isDeleted"];
             this.deleterUserId = _data["deleterUserId"];
             this.deletionTime = _data["deletionTime"] ? DateTime.fromISO(_data["deletionTime"].toString()) : <any>undefined;
@@ -26898,6 +26900,7 @@ export class StudentListDto implements IStudentListDto {
         data["studentId"] = this.studentId;
         data["name"] = this.name;
         data["activityClass"] = this.activityClass;
+        data["group"] = this.group;
         data["isDeleted"] = this.isDeleted;
         data["deleterUserId"] = this.deleterUserId;
         data["deletionTime"] = this.deletionTime ? this.deletionTime.toString() : <any>undefined;
@@ -26914,6 +26917,7 @@ export interface IStudentListDto {
     studentId: number;
     name: string | undefined;
     activityClass: string | undefined;
+    group: string | undefined;
     isDeleted: boolean;
     deleterUserId: number | undefined;
     deletionTime: DateTime | undefined;

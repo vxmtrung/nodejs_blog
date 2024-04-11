@@ -12,5 +12,7 @@ namespace MyCompanyName.AbpZeroTemplate.Dto
         public string Name { get; set; }
 
         public string ActivityClass { get; set; }
+
+        public string Group { get ; set; }
     }
 }

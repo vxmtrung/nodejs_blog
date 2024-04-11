@@ -11,6 +11,7 @@ import { StudentServiceProxy, StudentListDto, ListResultDtoOfStudentListDto } fr
 export class StudentComponent extends AppComponentBase implements OnInit  {
     students: StudentListDto[] = [];
     filter: string = '';
+    filterList: StudentListDto[] = [];
 
     constructor(
         injector: Injector,
@@ -26,6 +27,9 @@ export class StudentComponent extends AppComponentBase implements OnInit  {
     getStudent(): void {
         this._studentService.getPeople(this.filter).subscribe((result) => {
             this.students = result.items;
+            this.filterList = result.items;
         });
     }
+
+
 }

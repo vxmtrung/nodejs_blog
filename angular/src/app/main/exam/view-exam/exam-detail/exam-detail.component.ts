@@ -8,7 +8,7 @@ import { ExamConfigService } from '../service/examconfig.service';
 })
 export class ExamDetailComponent implements OnInit {
 
-  courses = ["Quản lí dự án phần mềm", "Nguyên lí ngôn ngữ lập trình", "Lập trính Web"];
+  courses = ["Quản lí dự án phần mềm", "Nguyên lí ngôn ngữ lập trình", "Lập trình Web"];
   types = ["Giữa kì", "Cuối kì"];
   policies = ["Cao nhất", "Lần nộp cuối cùng", "Trung bình"];
 

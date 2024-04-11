@@ -17,9 +17,9 @@
         <form autocomplete="off">
             <div class="kt-form">
                 <div class="row align-items-center kt-margin-b-10">
-                    <div class="col-xl-12">
+                    <div class="col-xl-10">
                         <div class="form-group align-items-center">
-                            <div class="input-group">
+                            <div class="input-group gap-2">
                                 <input [(ngModel)]="filter" name="filterText" autoFocus class="form-control"
                                     [placeholder]="l('SearchWithThreeDot' | localize)" type="text">
                                 <span class="input-group-btn">
@@ -43,6 +43,7 @@
                                 <th scope="col">MSSV</th>
                                 <th scope="col">Họ và tên</th>
                                 <th scope="col">Lớp</th>
+                                <th scope="col">Nhóm</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -51,6 +52,7 @@
                                 <td>{{student.studentId}}</td>
                                 <td>{{student.name}}</td>
                                 <td>{{student.activityClass}}</td>
+                                <td>{{student.group}}</td>
                             </tr>
                         </tbody>
                     </table>
